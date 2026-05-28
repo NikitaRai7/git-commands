@@ -49,3 +49,49 @@ Or add command into .zshrc file (code ~/.zshrc)
 git commit -m <commit_message>
 git commit --amend -m <new_message>
 git commit --amend --no-edit
+
+-- Create perfect commits
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+
+Conventional commits Example
+1. fix: for bug fix
+2. feat- for new features
+3. BREAKING CHANGES (use ! to draw attention)
+4. Other types (build:, chore:, refactor:, test:, style:, docs:)
+
+Conventional commit
+fix: Resolve issue with user registration
+feat: Add user authentication feature
+refactor: Extract validation helper function
+chore: Clean up unused dependencies
+
+Commit messages with scope 
+feat(lang): add Polish language
+
+Use ! to draw attention to a commit
+feat!: allow provided config object to extend other configs
+BREAKING CHANGE: 'extends' key in config file is now used for extention other config files
+
+Commit messgae with body and footer
+ feat: Implements user authentication
+
+ Add a new features to alow users to authenticate using email and password.
+
+ -Add login from compoment
+ -Implements authenication API endpoints
+ -Store user authentication token n local storage
+
+ Close #123
+ Co-authored-by: <user_name> <email>
+
+ https://www.conventionalcommits.org/en/v1.0.0/
+
+(Difference between current changes and last commit)
+ git diff
+
+ (Difference between current changes and <commit-id>)
+ git diff <commit-id>
